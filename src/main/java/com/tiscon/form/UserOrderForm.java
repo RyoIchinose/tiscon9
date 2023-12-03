@@ -25,6 +25,12 @@ public class UserOrderForm {
     private String email;
 
     @NotBlank
+    private String delivertime;
+
+    @NotBlank
+    private String arrivetime;
+
+    @NotBlank
     private String oldPrefectureId;
 
     @NotBlank
@@ -77,6 +83,22 @@ public class UserOrderForm {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getDelivertime() {
+        return delivertime;
+    }
+
+    public void setDelivertime(String delivertime) {
+        this.delivertime = delivertime;
+    }
+    
+    public String getArrivetime() {
+        return arrivetime;
+    }
+
+    public void setArrivetime(String arrivetime) {
+        this.arrivetime = arrivetime;
     }
 
     public String getOldPrefectureId() {

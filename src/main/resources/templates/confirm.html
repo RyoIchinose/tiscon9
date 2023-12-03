@@ -55,6 +55,25 @@
       </table>
     </div>
     <div class="col-sm-12">
+      <div class="sub-title">引っ越し日時</div>
+      <table class="table table-bordered">
+        <col span="1" style="background-color: #FFFFFF;">
+        <col span="2" style="background-color: #FFFFFF;">
+        <tbody>
+          <tr>
+            <th style="width: 40%">発送日 日時選択</th>
+            <td><span th:text="*{delivertime}"></span></td>    
+            <input type="hidden" name="delivertime" id="delivertime" th:value="*{delivertime}"/>
+          </tr>
+          <tr>
+            <th style="width: 40%">到着日 日時選択</th>
+            <td><span th:text="*{arrivetime}"></span></td>    
+            <input type="hidden" name="arrivetime" id="arrivetime" th:value="*{arrivetime}"/>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-12">
       <div class="sub-title">集荷元・お届け先</div>
       <table class="table table-bordered">
         <col span="1" style="background-color: #FFFFFF;">
