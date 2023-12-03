@@ -51,6 +51,11 @@
           <input type="text" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com"/>
           <p id="error-message-email" class="error" style="display: none;">※連絡先メールアドレスを入力してください</p>
         </div>
+        <div class="sub-title">引っ越し日時</div>
+        <label for="datetime">発送日 日時選択：</label>
+        <input type="date" id="delivertime" name="delivertime"><span class = "required"></span><br/>
+        <label for="datetime">到着日 日時選択：</label>
+        <input type="date" id="arrivetime" name="arrivetime"><span class = "required"></span>
         <div class="sub-title">集荷元・お届け先</div>
         <div class="form-group">
           <span class = "required"><label for="oldPrefectureId">集荷元住所（都道府県）</label></span>
