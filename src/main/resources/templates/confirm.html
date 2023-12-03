@@ -118,10 +118,26 @@
             <input type="hidden" name="box" id="box" th:value="*{box}"/>
           </tr>
           <tr>
-            <th>ベッドの個数</th>
+            <th>ダイニングテーブルの個数</th>
+            <td><span th:text="*{table}"></span></td>
+            <input type="hidden" name="table" id="table" th:value="*{table}"/>
+          </tr>
+          <tr>
+            <th>シングルベッドの個数</th>
             <td><span th:text="*{bed}"></span></td>
             <input type="hidden" name="bed" id="bed" th:value="*{bed}"/>
           </tr>
+          <tr>
+            <th>セミダブルベッドの個数</th>
+            <td><span th:text="*{bed2}"></span></td>
+            <input type="hidden" name="bed2" id="bed2" th:value="*{bed2}"/>
+          </tr>
+          <tr>
+            <th>ダブルベッドの個数</th>
+            <td><span th:text="*{bed3}"></span></td>
+            <input type="hidden" name="bed3" id="bed3" th:value="*{bed3}"/>
+          </tr>
+        
           <tr>
             <th>自転車の個数</th>
             <td><span th:text="*{bicycle}"></span></td>
