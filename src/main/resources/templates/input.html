@@ -167,6 +167,27 @@
             <option th:value="true" th:text="あり">あり</option>
           </select>
         </div>
+        <div class="form-group">
+          <span><label for="staircase">建物の階数</label></span>
+          <input type="text" id="staircase" name="staircase"  class="form-control"/>
+        </div>
+        <div class="form-group">
+          <span><label for="elevator">エレベータの有無</label></span>
+          <select id="elevator" name="elevator" class="form-control" >
+            <option>なし</option>
+            <option>あり</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <span><label for="elevator">電話希望時間帯</label></span>
+          <select id="elevator" name="elevator" class="form-control" >
+            <option>午前中</option>
+            <option>12時〜15時</option>
+            <option>15時〜18時</option>
+            <option>18時〜21時</option>
+            <option>21時〜24時</option>
+          </select>
+        </div>
       </fieldset>
       <div class="form-group">
         <div class="text-center">
