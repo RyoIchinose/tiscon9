@@ -5,6 +5,15 @@ body {
     padding: 0;
     margin: 0;
 }
+.required::after {
+    content: "必須";
+    color: #ffffff;
+    background: #cc0000;
+    font-size: 0.8em;
+    padding: 0.3em;
+    border-radius: 0.5em;
+    margin-left:0.3em;
+    }
 
 .jumbotron {
     height: 40vh;

@@ -37,39 +37,40 @@
       <fieldset>
         <div class="sub-title">お客様情報</div>
         <div class="form-group">
-          <label for="customerName">氏名</label>
+          <span class = "required"><label for="customerName">氏名</label></span>
           <input type="text" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎"/>
          <p id="error-message-customer" class="error" style="display: none;">※氏名を入力してください</p>
         </div>
         <div class="form-group">
-          <label for="tel">連絡先TEL ※半角で入力してください</label>
+          <span class = "required"><label for="tel">連絡先TEL ※半角で入力してください</label></span>
           <input placeholder="例：08011223344" type="tel" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678"/>
           <p id="error-message-tel" class="error" style="display: none;">※電話番号を入力してください</p>
         </div>
         <div class="form-group">
-          <label for="email">連絡先メールアドレス</label>
+          <span class = "required"><label for="email">連絡先メールアドレス</label></span>
           <input type="text" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com"/>
+          <p id="error-message-email" class="error" style="display: none;">※連絡先メールアドレスを入力してください</p>
         </div>
         <div class="sub-title">集荷元・お届け先</div>
         <div class="form-group">
-          <label for="oldPrefectureId">集荷元住所（都道府県）</label>
+          <span class = "required"><label for="oldPrefectureId">集荷元住所（都道府県）</label></span>
           <select id="oldPrefectureId" name="oldPrefectureId" class="form-control">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{oldPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="oldAddress">集荷元住所（市区町村以下）</label>
+          <span class = "required"><label for="oldAddress">集荷元住所（市区町村以下）</label></span>
           <input type="text" id="oldAddress" name="oldAddress" th:field="*{oldAddress}"
                  class="form-control" value="新宿区西新宿1-1-1"/>
         </div>
         <div class="form-group">
-          <label for="newPrefectureId">お届け先住所（都道府県）</label>
+          <span class = "required"><label for="newPrefectureId">お届け先住所（都道府県）</label></span>
           <select id="newPrefectureId" name="newPrefectureId" class="form-control">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{newPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="newAddress">お届け先住所（市区町村以下）</label>
+          <span class = "required"><label for="newAddress">お届け先住所（市区町村以下）</label></span>
           <input type="text" id="newAddress" name="newAddress" th:field="*{newAddress}" class="form-control"
                  value="札幌市南区1"/>
         </div>
@@ -77,24 +78,24 @@
       <fieldset>
       <div class="sub-title">お荷物情報</div>
         <div class="form-group">
-          <label for="box">段ボールの個数</label>
+          <span class = "required"><label for="box">段ボールの個数</label></span>
           <input type="text" id="box" name="box" th:field="*{box}" class="form-control" value="10"/>
         </div>
         <div class="form-group">
-          <label for="bed">ベッドの個数</label>
+          <span class = "required"><label for="bed">ベッドの個数</label></span>
           <input type="text" id="bed" name="bed" th:field="*{bed}" class="form-control" value="3"/>
         </div>
         <div class="form-group">
-          <label for="bicycle">自転車の個数</label>
+          <span class = "required"><label for="bicycle">自転車の個数</label></span>
           <input type="text" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" value="1"/>
         </div>
         <div class="form-group">
-          <label for="washingMachine">洗濯機の個数</label>
+          <span class = "required"><label for="washingMachine">洗濯機の個数</label></span>
           <input type="text" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control"
                  value="1"/>
         </div>
         <div class="form-group">
-          <label for="washingMachineInstallation">洗濯機の設置工事申し込み</label>
+          <span class = "required"><label for="washingMachineInstallation">洗濯機の設置工事申し込み</label></span>
           <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
             <option th:value="false" th:text="なし">なし</option>
             <option th:value="true" th:text="あり">あり</option>
@@ -122,6 +123,9 @@
     var text2Element = document.getElementById("tel");
     var text2Value = text2Element.value;
 
+    var text3Element = document.getElementById("email");
+    var text3Value = text3Element.value;
+
     flag = 0;
 
     // 入力が空欄の場合はアラートを表示
@@ -144,6 +148,17 @@
     } else{
       // 次のページに移動する処理をここに追加（例えば、window.location.href = '次のページのURL';）
       document.getElementById("error-message-tel").style.display = "none";
+      text2Element.classList.remove("error-input");
+
+    }
+    if (text3Value === '') {
+      document.getElementById("error-message-email").style.display = "block";
+      text3Element.classList.add("error-input");
+      
+      flag = 1;
+    } else{
+      // 次のページに移動する処理をここに追加（例えば、window.location.href = '次のページのURL';）
+      document.getElementById("error-message-email").style.display = "none";
       text2Element.classList.remove("error-input");
 
     }
