@@ -79,6 +79,9 @@ public class EstimateService {
 
         int boxes = getBoxForPackage(dto.getBox(), PackageType.BOX)
                 + getBoxForPackage(dto.getBed(), PackageType.BED)
+                + getBoxForPackage(dto.getBed(), PackageType.BED2)
+                + getBoxForPackage(dto.getBed(), PackageType.BED3)
+                + getBoxForPackage(dto.getBed(), PackageType.TABLE)
                 + getBoxForPackage(dto.getBicycle(), PackageType.BICYCLE)
                 + getBoxForPackage(dto.getWashingMachine(), PackageType.WASHING_MACHINE);
 

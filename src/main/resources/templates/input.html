@@ -85,9 +85,23 @@
         <div class="form-group">
           <span class = "required"><label for="box">段ボールの個数</label></span>
           <input type="text" id="box" name="box" th:field="*{box}" class="form-control" value="10"/>
+         
+        </div>
+        <div class="form-group">
+          <span class = "required"><label for="table">ダイニングテーブルの個数</label></span>
+          
+          <select id="table" name="table" class="form-control" >
+            <option th:value="0" th:text="0">0</option>
+            <option th:value="1" th:text="1">1</option>
+            <option th:value="2" th:text="2">2</option>
+            <option th:value="3" th:text="3">3</option>
+            <option th:value="4" th:text="4">4</option>
+            <option th:value="5" th:text="5">5</option>
+          </select>
         </div>
         <div class="form-group">
           <span class = "required"><label for="bed">ベッド(シングル)の個数</label></span>
+          
           <select id="bed" name="bed" class="form-control" >
             <option th:value="0" th:text="0">0</option>
             <option th:value="1" th:text="1">1</option>
@@ -97,19 +111,10 @@
             <option th:value="5" th:text="5">5</option>
           </select>
         </div>
-        <div class="form-group">
-          <span class = "required"><label for="table">ダイニングテーブルの個数</label></span>
-          <select id="tabel" name="table" class="form-control" >
-            <option th:value="0" th:text="0">0</option>
-            <option th:value="1" th:text="1">1</option>
-            <option th:value="2" th:text="2">2</option>
-            <option th:value="3" th:text="3">3</option>
-            <option th:value="4" th:text="4">4</option>
-            <option th:value="5" th:text="5">5</option>
-          </select>
-        </div>
+        
         <div class="form-group">
           <span class = "required"><label for="bed2">ベッド(セミダブル)の個数</label></span>
+          
           <select id="bed2" name="bed2" class="form-control" >
             <option th:value="0" th:text="0">0</option>
             <option th:value="1" th:text="1">1</option>
@@ -121,6 +126,7 @@
         </div>
         <div class="form-group">
           <span class = "required"><label for="bed3">ベッド(ダブル)の個数</label></span>
+          
           <select id="bed3" name="bed3" class="form-control" >
             <option th:value="0" th:text="0">0</option>
             <option th:value="1" th:text="1">1</option>
@@ -132,6 +138,7 @@
         </div>
         <div class="form-group">
           <span class = "required"><label for="bicycle">自転車の個数</label></span>
+          
           <select id="bicycle" name="bicycle" class="form-control" >
             <option th:value="0" th:text="0">0</option>
             <option th:value="1" th:text="1">1</option>
@@ -143,6 +150,7 @@
         </div>
         <div class="form-group">
           <span class = "required"><label for="washingMachine">洗濯機の個数</label></span>
+          
           <select id="washingMachine" name="washingMachine" class="form-control" >
             <option th:value="0" th:text="0">0</option>
             <option th:value="1" th:text="1">1</option>
@@ -184,6 +192,27 @@
     var text3Element = document.getElementById("email");
     var text3Value = text3Element.value;
 
+    var text4Element = document.getElementById("box");
+    var text4Value = text4Element.value;
+
+    var text5Element = document.getElementById("table");
+    var text5Value = text5Element.value;
+
+    var text6Element = document.getElementById("bed");
+    var text6Value = text6Element.value;
+    
+    var text7Element = document.getElementById("bed2");
+    var text7Value = text7Element.value;
+
+    var text8Element = document.getElementById("bed3");
+    var text8Value = text8Element.value;
+
+    var text9Element = document.getElementById("bicycle");
+    var text9Value = text9Element.value;
+
+    var text10Element = document.getElementById("washingMachine");
+    var text10Value = text10Element.value;
+
     flag = 0;
 
     // 入力が空欄の場合はアラートを表示
@@ -220,6 +249,8 @@
       text2Element.classList.remove("error-input");
 
     }
+    
+
     if(flag==1){
       alert('入力内容に誤りがあります。お手数ですが、確認をお願いします。');
       return false;
