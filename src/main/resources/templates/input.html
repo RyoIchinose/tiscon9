@@ -83,52 +83,68 @@
         </div>
         <div class="form-group">
           <span class = "required"><label for="bed">ベッド(シングル)の個数</label></span>
-          <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
-            <option th:value="false" th:text="1">1</option>
-            <option th:value="true" th:text="2">2</option>
-            <option th:value="false" th:text="3">3</option>
-            <option th:value="true" th:text="4">4</option>
-            <option th:value="false" th:text="5">5</option>
+          <select id="bed" name="bed" class="form-control" >
+            <option th:value="0" th:text="0">0</option>
+            <option th:value="1" th:text="1">1</option>
+            <option th:value="2" th:text="2">2</option>
+            <option th:value="3" th:text="3">3</option>
+            <option th:value="4" th:text="4">4</option>
+            <option th:value="5" th:text="5">5</option>
           </select>
         </div>
         <div class="form-group">
-          <span class = "required"><label for="bed">ベッド(ダブル)の個数</label></span>
-          <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
-            <option th:value="false" th:text="1">1</option>
-            <option th:value="true" th:text="2">2</option>
-            <option th:value="false" th:text="3">3</option>
-            <option th:value="true" th:text="4">4</option>
-            <option th:value="false" th:text="5">5</option>
+          <span class = "required"><label for="table">ダイニングテーブルの個数</label></span>
+          <select id="tabel" name="table" class="form-control" >
+            <option th:value="0" th:text="0">0</option>
+            <option th:value="1" th:text="1">1</option>
+            <option th:value="2" th:text="2">2</option>
+            <option th:value="3" th:text="3">3</option>
+            <option th:value="4" th:text="4">4</option>
+            <option th:value="5" th:text="5">5</option>
           </select>
         </div>
         <div class="form-group">
-          <span class = "required"><label for="bed">ベッド(セミダブル)の個数</label></span>
-          <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
-            <option th:value="false" th:text="1">1</option>
-            <option th:value="true" th:text="2">2</option>
-            <option th:value="false" th:text="3">3</option>
-            <option th:value="true" th:text="4">4</option>
-            <option th:value="false" th:text="5">5</option>
+          <span class = "required"><label for="bed2">ベッド(セミダブル)の個数</label></span>
+          <select id="bed2" name="bed2" class="form-control" >
+            <option th:value="0" th:text="0">0</option>
+            <option th:value="1" th:text="1">1</option>
+            <option th:value="2" th:text="2">2</option>
+            <option th:value="3" th:text="3">3</option>
+            <option th:value="4" th:text="4">4</option>
+            <option th:value="5" th:text="5">5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <span class = "required"><label for="bed3">ベッド(ダブル)の個数</label></span>
+          <select id="bed3" name="bed3" class="form-control" >
+            <option th:value="0" th:text="0">0</option>
+            <option th:value="1" th:text="1">1</option>
+            <option th:value="2" th:text="2">2</option>
+            <option th:value="3" th:text="3">3</option>
+            <option th:value="4" th:text="4">4</option>
+            <option th:value="5" th:text="5">5</option>
           </select>
         </div>
         <div class="form-group">
           <span class = "required"><label for="bicycle">自転車の個数</label></span>
-          <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
-            <option th:value="false" th:text="1">1</option>
-            <option th:value="true" th:text="2">2</option>
-            <option th:value="false" th:text="3">3</option>
-            <option th:value="true" th:text="4">4</option>
-            <option th:value="false" th:text="5">5</option>
+          <select id="bicycle" name="bicycle" class="form-control" >
+            <option th:value="0" th:text="0">0</option>
+            <option th:value="1" th:text="1">1</option>
+            <option th:value="2" th:text="2">2</option>
+            <option th:value="3" th:text="3">3</option>
+            <option th:value="4" th:text="4">4</option>
+            <option th:value="5" th:text="5">5</option>
           </select>
         </div>
         <div class="form-group">
           <span class = "required"><label for="washingMachine">洗濯機の個数</label></span>
-          <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
-            <option th:value="false" th:text="1">1</option>
-            <option th:value="true" th:text="2">2</option>
-            <option th:value="false" th:text="3">3</option>
-            <option th:value="true" th:text="4">4</option>
-            <option th:value="false" th:text="5">5</option>
+          <select id="washingMachine" name="washingMachine" class="form-control" >
+            <option th:value="0" th:text="0">0</option>
+            <option th:value="1" th:text="1">1</option>
+            <option th:value="2" th:text="2">2</option>
+            <option th:value="3" th:text="3">3</option>
+            <option th:value="4" th:text="4">4</option>
+            <option th:value="5" th:text="5">5</option>
           </select>
         </div>
         <div class="form-group">

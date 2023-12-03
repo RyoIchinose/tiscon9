@@ -38,11 +38,23 @@ public class UserOrderForm {
 
     @Numeric
     @NotBlank
+    private String table;
+
+    @Numeric
+    @NotBlank
     private String box;
 
     @Numeric
     @NotBlank
     private String bed;
+
+    @Numeric
+    @NotBlank
+    private String bed2;
+
+    @Numeric
+    @NotBlank
+    private String bed3;
 
     @Numeric
     @NotBlank
@@ -110,6 +122,13 @@ public class UserOrderForm {
     public void setNewAddress(String newAddress) {
         this.newAddress = newAddress;
     }
+    public String getTable() {
+        return table;
+    }
+
+    public void setTable(String table) {
+        this.table = table;
+    }
 
     public String getBox() {
         return box;
@@ -125,6 +144,22 @@ public class UserOrderForm {
 
     public void setBed(String bed) {
         this.bed = bed;
+    }
+
+    public String getBed2() {
+        return bed2;
+    }
+
+    public void setBed2(String bed2) {
+        this.bed2 = bed2;
+    }
+
+    public String getBed3() {
+        return bed3;
+    }
+
+    public void setBed3(String bed3) {
+        this.bed3 = bed3;
     }
 
     public String getBicycle() {
